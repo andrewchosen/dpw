@@ -36,3 +36,54 @@ characters.append("Obi Wan")
 movies = dict() #create dictionary object
 movies = {"Star Wars":"Darth Vader", "Silence of the Lambs":"Hannibal Lecter"}
 print movies["Star Wars"]
+
+print "-----------------------------------"
+
+'''
+#While Loop ---
+i = 0
+while i<9:
+    print "The count is", i
+    i = i+1
+
+#For Loop ---
+for i in range(0,10):
+    print "The count is", i
+    i = i+1
+
+#For Each Loop ---
+rappers = ["Tupac", "Nas", "Biggle Smalls"]
+
+for r in rappers:
+    # print "One of the best rappers is " + r
+    pass
+
+#Functions ---
+x = 2
+
+def calcArea(h, w):
+    area = h * w
+    return area + x
+    # pass
+
+a = calcArea(20, 40);
+print "My area is " + str(a) + "sqft."
+'''
+
+title = "Contact Us"
+body = "You can contact us at contact@us.com"
+message = '''
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{title}</title>
+    </head>
+    <body>
+        {body}
+    </body>
+</html>
+'''
+
+message = message.format(**locals())
+
+print message
