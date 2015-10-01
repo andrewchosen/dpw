@@ -7,20 +7,20 @@ drink function
 
 if drink_number is 3 or more:
     {person_two} says, "Listen, {person_one}, that is {a_or_an} {adjective_one} amount of drinks to order."
-    {person_one} replies, "Don't be such a {adjective_one} {noun_one}, {person_two}. One is for me, and the other {leftover} drinks are for my other personalities."
+    {person_one} replies, "Don't be such a {adjective_two} {animal}, {person_two}. One is for me, and the other {leftover} drinks are for my other personalities."
     drink function
 
 elif drink_number is 2:
     {person_two} says, "Who's the other drink for?"
-    {person_one} replies, "It's for my other personality, you {adjective_one} {noun_one}."
+    {person_one} replies, "It's for my other personality, you {adjective_two} {animal}."
     drink function
 
 else:
     {person_two} says, "{person_one}, what about your other personalities? What will they drink?"
-    {person_one} replies, "They've been {adjective_one} {noun_one}s. They don't deserve to drink."
+    {person_one} replies, "They've been {adjective_two} {animal}s. They don't deserve to drink."
     {person_one} drinks the drink.
 
-{person_two} says, "Well okay then. When you're done, we should {verb_one} the {noun_two} while it's still early."
+{person_two} says, "Well okay then. When you're done, we should {action} the {animal_two} while it's still early."
 {person_one} responds, "You're on! Let me just order {drink_number_two} more drinks and I'll be ready to {verb_two}!"
 
 if drink_number_two is more than 1 {
@@ -31,3 +31,14 @@ else
 
 
 '''
+
+# User prompts
+person_one = raw_input("Choose a name:   ")
+person_two = raw_input("Choose another name:   ")
+drink_number_one = raw_input("Choose a number between 1 and 10:   ")
+drink_number_two = raw_input("Choose another number between 1 and 10:   ")
+adjective_one = raw_input("Choose an adjective:   ")
+adjective_two = raw_input("Choose another adjective:   ")
+animal = raw_input("Choose an animal(singular):   ")
+action = raw_input("Choose an action verb:   ")
+animal_two = raw_input("Choose an animal(plural):   ")
