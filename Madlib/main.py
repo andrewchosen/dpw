@@ -42,3 +42,12 @@ adjective_two = raw_input("Choose another adjective:   ")
 animal = raw_input("Choose an animal(singular):   ")
 action = raw_input("Choose an action verb:   ")
 animal_two = raw_input("Choose an animal(plural):   ")
+
+# Function for displaying person_one drinking their drinks
+def drink():
+    i = 0
+    for i in range(0, int(drink_number_one)):
+        print str(person_one) + " drinks drink number " + str(i+1) + "."
+        i += 1
+
+drink()
