@@ -34,6 +34,7 @@ else
 
 # User prompts
 person_one = raw_input("Choose a name:   ")
+age = raw_input("And how old is " + str(person_one) + "?")
 person_two = raw_input("Choose another name:   ")
 drink_number_one = raw_input("Choose a number between 1 and 10:   ")
 drink_number_two = raw_input("Choose another number between 1 and 10:   ")
@@ -42,6 +43,9 @@ adjective_two = raw_input("Choose another adjective:   ")
 animal = raw_input("Choose an animal(singular):   ")
 action = raw_input("Choose an action verb:   ")
 animal_two = raw_input("Choose an animal(plural):   ")
+
+# define age in dictionary object
+person_one_age = {str(person_one): str(age)}
 
 # Function for displaying person_one drinking their drinks
 def drink():
@@ -70,4 +74,13 @@ else:
     str(person_one) + ' replies, "They\'ve been ' + str(adjective_two) + ' ' + str(animal) + 's lately. They don\'t deserve to drink."'
     print str(person_one) + " drinks the drink."
 
+print str(person_two) + ' says, "Well okay then. When you\'re done, we should ' + str(action) + ' the ' + str(animal_two) + ' while it\'s still early."'
+print str(person_one) + ' responds, "You\'re on! Let me just order ' + str(drink_number_two) + ' more drinks and I\'ll be ready to ' + str(action) + '!"'
 
+if int(drink_number_two) > 1:
+    # if drink_number_two is more than 1, then...
+    print '"Are you kidding? That is ' + str(drink_number_one + drink_number_two) + ' drinks! You\'re going to be sick!" ' + str(person_two) + ' exclaims.'
+    print '"My other personalities, man! Don\'t listen to ' + str(person_two) + ', . They don\'t mean it. We\'ve known each other since I was ' + person_one_age.get(str(person_one)) + ' years old."'
+else:
+    # "I guess one more wouldn't hurt. Heck, order me one, too!" {{person_two}} says.
+    pass
