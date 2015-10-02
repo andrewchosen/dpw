@@ -50,4 +50,24 @@ def drink():
         print str(person_one) + " drinks drink number " + str(i+1) + "."
         i += 1
 
-drink()
+# Start of Madlib output
+print person_one + " walks into a bar and asks the bartender for " + str(drink_number_one) + " drinks."
+
+# If statement to display a response depending on how many drinks person_one orders
+if int(drink_number_one) >= 3:
+    # If more than 3 drinks are ordered, then...
+    print str(person_two) + ' says, "Listen, ' + str(person_one) + ', that is a ' + str(adjective_one) + ' amount of drinks to order!"'
+    print str(person_one) + ' replies, "Don\'t be such a ' + str(adjective_two) + ' ' + str(animal) + ', ' + str(person_two) + '. One is for me, and the other ' + str(int(drink_number_one)-1) + ' drinks are for my other personalities."'
+    drink()
+elif int(drink_number_one) == 2:
+    # Or else if there is 2 drinks, then...
+    print str(person_two) + ' says, "Two drinks? Are you ' + str(adjective_one) + '? I\'m driving!"'
+    print str(person_one) + ' replies, "It\'s for my other personality, you ' + str(adjective_two) + ' ' + str(animal) + '."'
+    drink()
+else:
+    # Otherwise there must be only 1 drink, so do this:
+    str(person_two) + ' says, "' + str(person_one) + ', what about your other personalities? What will they drink?"'
+    str(person_one) + ' replies, "They\'ve been ' + str(adjective_two) + ' ' + str(animal) + 's lately. They don\'t deserve to drink."'
+    print str(person_one) + " drinks the drink."
+
+
