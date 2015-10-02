@@ -47,8 +47,8 @@ elif int(drink_number_one) == 2:
     drink(0,int(drink_number_one))
 else:
     # Otherwise there must be only 1 drink, so do this:
-    str(person_two) + ' says, "' + str(person_one) + ', what about your other personalities? What will they drink?"'
-    str(person_one) + ' replies, "They\'ve been ' + str(adjective_two) + ' ' + str(animal) + 's lately. They don\'t deserve to drink."'
+    print str(person_two) + ' says, "' + str(person_one) + ', what about your other personalities? What will they drink?"'
+    print str(person_one) + ' replies, "They\'ve been ' + str(adjective_two) + ' ' + str(animal) + 's lately. They don\'t deserve to drink."'
     print str(person_one) + " drinks the drink."
 
 print str(person_two) + ' says, "Well okay then. When you\'re done, we should ' + str(action) + ' the ' + str(animal_two) + ' while it\'s still early."'
@@ -60,6 +60,6 @@ if int(drink_number_two) > 1:
     print '"My other personalities, man! Don\'t listen to ' + str(person_two) + ', ' + random_name + '. They don\'t mean it. We\'ve known each other since I was ' + person_one_age.get(str(person_one)) + ' years old and they still don\'t know that they don\'t really exist."'
 else:
     # if drink_number_two is not more than 1, it must be 1, so do this:
-    print '"I guess one more wouldn\'t hurt. Heck, order me one, too! ' + str(person_two) + ' says.'
+    print '"I guess one more wouldn\'t hurt. Heck, order me one, too!" ' + str(person_two) + ' says.'
 
 print "******* THE END *******"
