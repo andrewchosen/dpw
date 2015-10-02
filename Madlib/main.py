@@ -82,5 +82,5 @@ if int(drink_number_two) > 1:
     print '"Are you kidding? That is ' + str(drink_number_one + drink_number_two) + ' drinks! You\'re going to be sick!" ' + str(person_two) + ' exclaims.'
     print '"My other personalities, man! Don\'t listen to ' + str(person_two) + ', . They don\'t mean it. We\'ve known each other since I was ' + person_one_age.get(str(person_one)) + ' years old."'
 else:
-    # "I guess one more wouldn't hurt. Heck, order me one, too!" {{person_two}} says.
-    pass
+    # if drink_number_two is not more than 1, it must be 1, so do this:
+    print '"I guess one more wouldn\'t hurt. Heck, order me one, too! ' + str(person_two) + ' says.'
