@@ -9,32 +9,42 @@ import webapp2 #use the webapp2 library
 
 class MainHandler(webapp2.RequestHandler): #declaring a class
     def get(self): #function that starts everything. Initializing
-        page_head = '''
+        p = Page()
+        self.response.write(p.print_out())
+        # if self.request.GET:
+        #     # store form info
+        #     user =  self.request.GET['user']
+        #     email =  self.request.GET['email']
+        #     pass
+        # else:
+        #     pass
+
+class Page(object):
+    def __init__(self):
+        self.title = "Simple Form"
+        self.head = """
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Simple Form</title>
+        <title>{self.title}</title>
     </head>
     <body>
-        '''
-        page_body = '''
+        """
+        self.body = """
         <form method="GET">
-            <label>Name</label><input type="text" name="user" />
-            <label>Email</label><input type="text" name="email" />
-            <input type="submit" value="Submit" />
-        '''
-        page_close = '''
+                    <label>Name</label><input type="text" name="user" />
+                    <label>Email</label><input type="text" name="email" />
+                    <input type="submit" value="Submit" />
         </form>
-    </body>
+        """
+        self.close = """
+</body>
 </html>
-        '''
-        if self.request.GET:
-            # store form info
-            user =  self.request.GET['user']
-            email =  self.request.GET['email']
-            self.response.write(page_head+user+' '+email+page_body+page_close)
-        else:
-            self.response.write(page_head+page_body+page_close)
+        """
+    def print_out(self):
+        all =  self.head + self.body + self.close
+        all = all.format(**locals())
+        return all
 
 #don't touch
 app = webapp2.WSGIApplication([
