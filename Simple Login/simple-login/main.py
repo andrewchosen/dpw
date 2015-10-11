@@ -15,12 +15,18 @@ class MainHandler(webapp2.RequestHandler): #declaring a class
         if self.request.GET:
             # create NewUser with form info
             user = NewUser()
-            user.first_name =  self.request.GET['first_name']
-            user.last_name =  self.request.GET['last_name']
-            user.gender = self.request.GET['gender']
-            user.age = self.request.GET['age']
-            user.status = self.request.GET['status']
-            user.location = self.request.GET['location']
+            if self.request.GET['first_name'] != "":
+                user.first_name =  self.request.GET['first_name']
+            if self.request.GET['first_name'] != "":
+                user.last_name =  self.request.GET['last_name']
+            if self.request.GET['first_name'] != "":
+                user.gender = self.request.GET['gender']
+            if self.request.GET['first_name'] != "":
+                user.age = self.request.GET['age']
+            if self.request.GET['first_name'] != "":
+                user.status = self.request.GET['status']
+            if self.request.GET['first_name'] != "":
+                user.location = self.request.GET['location']
 
             # run render behavior from NewUser class to output HTML
             p.body = user.render()
