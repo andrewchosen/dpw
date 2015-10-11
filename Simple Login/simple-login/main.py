@@ -70,8 +70,8 @@ class Page(object):
 <html>
     <head>
         <title>{self.title}</title>
-        <link href="{self.main_css}" rel="stylesheet" type="text/css" />
         <link href="{self.reset_css}" rel="stylesheet" type="text/css" />
+        <link href="{self.main_css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <section>
