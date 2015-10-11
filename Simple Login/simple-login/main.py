@@ -22,11 +22,13 @@ class MainHandler(webapp2.RequestHandler): #declaring a class
 class Page(object):
     def __init__(self):
         self.title = "Simple Form"
+        self.css = "css/styles.css"
         self.head = """
 <!DOCTYPE html>
 <html>
     <head>
         <title>{self.title}</title>
+        <link href="{self.css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         """
