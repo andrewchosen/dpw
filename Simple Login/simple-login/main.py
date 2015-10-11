@@ -53,7 +53,7 @@ class MainHandler(webapp2.RequestHandler): #declaring a class
                 <fieldset id="location">
                     <label for="location">Location</label><input type="text" name="location" />
                 </fieldset>
-                <input type="submit" value="Submit" />
+                <button type="submit">Create Account</button>
         </form>
             """
         # print the HTML using print_out behavior from Page class
@@ -102,11 +102,13 @@ class NewUser(object):
     # render the html and return it to be called later
     def render(self):
         content = """
-            <h2>{self.first_name} {self.last_name}</h2>
-            <p><strong>Gender:</strong> {self.gender}</p>
-            <p><strong>Age:</strong> {self.age} years old</p>
-            <p><strong>Relationship Status:</strong> {self.status}</p>
-            <p><strong>Location:</strong> {self.location}</p>
+            <div>
+                <h2>{self.first_name} {self.last_name}</h2>
+                <p><strong>Gender:</strong> {self.gender}</p>
+                <p><strong>Age:</strong> {self.age} years old</p>
+                <p><strong>Relationship Status:</strong> {self.status}</p>
+                <p><strong>Location:</strong> {self.location}</p>
+            </div>
         """
         content = content.format(**locals())
         return content
