@@ -10,6 +10,10 @@ section {
     margin: 60px auto;
 }
 
+a {
+    color: #31b541;
+}
+
 h1 {
     font-size: 3em;
     color: #1e1e1e;

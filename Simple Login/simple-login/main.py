@@ -98,8 +98,8 @@ class Page(object):
 # class for creating a new user from form submissions
 class NewUser(object):
     def __init__(self):
-        self.first_name = "John"
-        self.last_name = "Doe"
+        self.first_name = "ERROR: "
+        self.last_name = "<a href='..'>Try Again</a>"
         self.gender = "N/A"
         self.age = 0
         self.status = "Undisclosed"
