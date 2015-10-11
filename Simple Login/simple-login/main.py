@@ -63,18 +63,23 @@ class MainHandler(webapp2.RequestHandler): #declaring a class
 class Page(object):
     def __init__(self):
         self.title = "Simple Form"
-        self.css = "css/styles.css"
+        self.main_css = "css/styles.css"
+        self.reset_css = "css/reset.css"
         self.head = """
 <!DOCTYPE html>
 <html>
     <head>
         <title>{self.title}</title>
-        <link href="{self.css}" rel="stylesheet" type="text/css" />
+        <link href="{self.main_css}" rel="stylesheet" type="text/css" />
+        <link href="{self.reset_css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <section>
+            <h1>{self.title}</h1>
         """
         self.body = ""
         self.close = """
+        </section>
 </body>
 </html>
         """
@@ -97,11 +102,11 @@ class NewUser(object):
     # render the html and return it to be called later
     def render(self):
         content = """
-        <h2>{self.first_name} {self.last_name}</h2>
-        <p><strong>Gender:</strong> {self.gender}</p>
-        <p><strong>Age:</strong> {self.age} years old</p>
-        <p><strong>Relationship Status:</strong> {self.status}</p>
-        <p><strong>Location:</strong> {self.location}</p>
+            <h2>{self.first_name} {self.last_name}</h2>
+            <p><strong>Gender:</strong> {self.gender}</p>
+            <p><strong>Age:</strong> {self.age} years old</p>
+            <p><strong>Relationship Status:</strong> {self.status}</p>
+            <p><strong>Location:</strong> {self.location}</p>
         """
         content = content.format(**locals())
         return content
