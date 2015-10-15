@@ -16,7 +16,19 @@ class FavoriteMovies(object):
 
     #calculate time span between movies
     def calc_time_span(self):
-        pass
+        #years
+        years = []
+        for movie in self.__movie_list:
+            years.append(movie.year)
+
+        #sort years from low to high
+        years.sort()
+
+        #subtract low year from high
+        num = len(years) - 1
+        span = years[num] - years[0]
+        return 'The span of films entered is ' + str(span) + ' years.'
+
 
 
 class MovieData(object): #Data Object

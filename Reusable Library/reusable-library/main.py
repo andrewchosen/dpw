@@ -24,8 +24,13 @@ class MainHandler(webapp2.RequestHandler):
         md2.director = "Some Guy"
         lib.add_movie(md2)
 
+        md3 = MovieData()
+        md3.title = "Teenage Mutant Ninja Turtles II"
+        md3.year = 1991 # calling function
+        md3.director = "Some Guy"
+        lib.add_movie(md3)
 
-        p.body = lib.compile_list()
+        p.body = lib.compile_list() + lib.calc_time_span()
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
