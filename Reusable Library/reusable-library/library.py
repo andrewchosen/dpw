@@ -28,7 +28,9 @@ class FavoriteMovies(object):
         num = len(years) - 1
         span = years[num] - years[0]
         return 'The span of films entered is ' + str(span) + ' years.'
-
+    @property
+    def movie_list(self):
+        return self.__movie_list
 
 
 class MovieData(object): #Data Object
