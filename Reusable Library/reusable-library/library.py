@@ -13,19 +13,19 @@ class FoodList(object):
     def create_list(self):
         output = ''
         for food in self.__food_items:
-            output += str(food.quantity) + ' ' + food.name + ' (' + str(food.calories * food.quantity) + ' total calories)<br />'
+            output += "<article><p>" + str(food.quantity) + '</p><p>' + food.name + '</p><p>' + str(food.calories * food.quantity) + '</p></article>'
         return output
 
     #calculate total calories
-    def total_calories(self):
+    def total_calories(self, t):
         calories = 0
         result = ""
         for food in self.__food_items:
             calories += food.calories * food.quantity
-        if calories > self.__goal:
-            result = str(calories - self.__goal) + " daily calories over your goal. Oops!"
-        elif calories < self.__goal:
-            result = str(self.__goal - calories) + " daily calories under your goal. Way to go!"
+        if calories > t:
+            result = str(calories - t) + " daily calories over your goal. Oops!"
+        elif calories < t:
+            result = str(t - calories) + " daily calories under your goal. Way to go!"
         else:
             result = "exactly your daily goal. Niiiice!"
         return "Your total calories consumed today are " + str(calories) + " which is " + result
@@ -55,7 +55,7 @@ class FoodData(object): #Data Object
 
     @calories.setter
     def calories(self, c):
-        self.__calories = c
+        self.__calories = int(c)
 
     @property
     def quantity(self):
@@ -63,4 +63,4 @@ class FoodData(object): #Data Object
 
     @quantity.setter
     def quantity(self, q):
-        self.__quantity = q
+        self.__quantity = int(q)
