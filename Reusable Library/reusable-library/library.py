@@ -1,51 +1,57 @@
-class FavoriteMovies(object):
+class FoodList(object):
     def __init__(self):
-        self.__movie_list = []
+        self.__food_items = []
         pass
-    #some way to add to array of movies
-    def add_movie(self, m):
-        self.__movie_list.append(m)
+
+    #add FoodItem data object to array
+    def add_food(self, m):
+        self.__food_items.append(m)
         print m.title
 
-    #generate a list of movies
-    def compile_list(self):
+    #create list of food items
+    def create_list(self):
         output = ''
-        for movie in self.__movie_list:
-            output += 'Title: ' + movie.title + ' (' + str(movie.year) + ')<br />'
+        for food in self.__food_items:
+            output += food.quantity + ' ' + food.name + ' (' + str(food.calories * food.quantity) + ' total calories)<br />'
         return output
 
-    #calculate time span between movies
-    def calc_time_span(self):
-        #years
-        years = []
-        for movie in self.__movie_list:
-            years.append(movie.year)
+    #calculate total calories
+    def total_calories(self):
+        calories = 0
+        for food in self.__food_items:
+            calories += food.calories
 
-        #sort years from low to high
-        years.sort()
-
-        #subtract low year from high
-        num = len(years) - 1
-        span = years[num] - years[0]
-        return 'The span of films entered is ' + str(span) + ' years.'
     @property
-    def movie_list(self):
-        return self.__movie_list
+    def food_items(self):
+        return self.__food_items
 
 
-class MovieData(object): #Data Object
+class FoodData(object): #Data Object
     def __init__(self):
-        self.title = ''
-        self.__year = 0 # check for valid year
-        self.director = ''
-    @property
-    def year(self):
-        return self.__year
+        self.__name = ""
+        self.__calories = 0
+        self.__quantity = 1
 
-    @year.setter
-    def year(self, y): #if date is invalid
-        if y > 2015:
-            print "Error: Invalid date!"
-            self.__year = 2015
-        else:
-            self.__year = y
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, n):
+        self.__year = n
+
+    @property
+    def calories(self):
+        return self__calories = 0
+
+    @calories.setter
+    def calories(self, c):
+        self.__calories = c
+
+    @property
+    def quantity(self):
+        return self.__quantity = 1;
+
+    @quantity.setter
+    def quantity(self, q):
+        self.__quantity = q

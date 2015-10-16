@@ -1,6 +1,6 @@
 class Page(object):
     def __init__(self):
-        self.__title = "Welcome!"
+        self.__title = "Calorie Calculator"
         self.__css = "css/styles.css"
         self.__head = """
 <!DOCTYPE html>

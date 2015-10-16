@@ -7,7 +7,7 @@ class MainHandler(webapp2.RequestHandler):
 
         #page for class
         p = Page()
-        lib = FavoriteMovies()
+        food_list = FoodList()
 
         #movie title
         #year movie was made
