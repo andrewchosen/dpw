@@ -23,9 +23,9 @@ class FoodList(object):
         for food in self.__food_items:
             calories += food.calories * food.quantity
         if calories > self.__goal:
-            result = calories - self.__goal + " daily calories over your goal. Oops!"
+            result = str(calories - self.__goal) + " daily calories over your goal. Oops!"
         elif calories < self.__goal:
-            result = self.__goal - calories + " daily calories under your goal. Way to go!"
+            result = str(self.__goal - calories) + " daily calories under your goal. Way to go!"
         else:
             result = "exactly your daily goal. Niiiice!"
         return "Your total calories consumed today are " + str(calories) + " which is " + result
