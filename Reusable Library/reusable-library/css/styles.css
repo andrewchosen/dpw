@@ -1,3 +1,21 @@
 body {
-    font: 14px/1.4 arial,helvetica,sans-serif;
+    font: 16px/1.4 arial,helvetica,sans-serif;
+    background-color: #DDF7F7;
+    margin: 0;
+    color: #868686;
+}
+
+header {
+    background-color: #2E2D29;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 30px;
 }

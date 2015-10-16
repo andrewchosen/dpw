@@ -10,9 +10,18 @@ class Page(object):
         <link href="{self.css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <header>
+            <div class="container">
+                <h1>{self.title}</h1>
+            </div>
+        </header>
+        <section>
+            <div class="container">
         """
         self.__body = ""
         self.__close = """
+            </div>
+        </section>
     </body>
 </html>
         """
