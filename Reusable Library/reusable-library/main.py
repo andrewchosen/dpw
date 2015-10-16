@@ -11,15 +11,21 @@ class MainHandler(webapp2.RequestHandler):
 
         #add food item for testing
         food1 = FoodData()
-        food1.name = "Banana"
+        food1.name = "Bananas"
         food1.calories = 20
         food1.quantity = 3
         food_list.add_food(food1)
 
+        food2 = FoodData()
+        food2.name = "Apples"
+        food2.calories = 200
+        food2.quantity = 3
+        food_list.add_food(food2)
+
         if self.request.GET:
             p.body = "We have parameters!"
         else:
-            p.body = food_list.create_list()
+            p.body = food_list.create_list() + "<br />" + food_list.total_calories()
 
         self.response.write(p.print_out())
 
