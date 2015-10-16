@@ -6,13 +6,13 @@ class FoodList(object):
     #add FoodItem data object to array
     def add_food(self, m):
         self.__food_items.append(m)
-        print m.title
+        return m.name
 
     #create list of food items
     def create_list(self):
         output = ''
         for food in self.__food_items:
-            output += food.quantity + ' ' + food.name + ' (' + str(food.calories * food.quantity) + ' total calories)<br />'
+            output += str(food.quantity) + ' ' + food.name + ' (' + str(food.calories * food.quantity) + ' total calories)<br />'
         return output
 
     #calculate total calories
@@ -20,6 +20,7 @@ class FoodList(object):
         calories = 0
         for food in self.__food_items:
             calories += food.calories
+        return calories
 
     @property
     def food_items(self):
@@ -38,7 +39,7 @@ class FoodData(object): #Data Object
 
     @name.setter
     def name(self, n):
-        self.__year = n
+        self.__name = n
 
     @property
     def calories(self):

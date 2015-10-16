@@ -1,5 +1,5 @@
 import webapp2
-from library import MovieData, FavoriteMovies
+from library import FoodData, FoodList
 from pages import Page
 
 class MainHandler(webapp2.RequestHandler):
@@ -9,31 +9,17 @@ class MainHandler(webapp2.RequestHandler):
         p = Page()
         food_list = FoodList()
 
-        #movie title
-        #year movie was made
-        #director of the film
-        md1 = MovieData()
-        md1.title = "The Princess Bride"
-        md1.year = 1989 # calling function
-        md1.director = "Rob Reiner"
-        lib.add_movie(md1)
-
-        md2 = MovieData()
-        md2.title = "Teenage Mutant Ninja Turtles"
-        md2.year = 1990 # calling function
-        md2.director = "Some Guy"
-        lib.add_movie(md2)
-
-        md3 = MovieData()
-        md3.title = "Teenage Mutant Ninja Turtles II"
-        md3.year = 1991 # calling function
-        md3.director = "Some Guy"
-        lib.add_movie(md3)
+        #add food item for testing
+        food1 = FoodData()
+        food1.name = "Banana"
+        food1.calories = 20
+        food1.quantity = 3
+        food_list.add_food(food1)
 
         if self.request.GET:
             p.body = "We have parameters!"
         else:
-            p.body = "No Parameters found."
+            p.body = food_list.create_list()
 
         self.response.write(p.print_out())
 
