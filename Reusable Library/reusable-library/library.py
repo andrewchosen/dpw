@@ -42,7 +42,7 @@ class FoodData(object): #Data Object
 
     @property
     def calories(self):
-        return self__calories = 0
+        return self.__calories
 
     @calories.setter
     def calories(self, c):
@@ -50,7 +50,7 @@ class FoodData(object): #Data Object
 
     @property
     def quantity(self):
-        return self.__quantity = 1;
+        return self.__quantity
 
     @quantity.setter
     def quantity(self, q):
