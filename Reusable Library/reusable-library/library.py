@@ -19,8 +19,8 @@ class FoodList(object):
     def total_calories(self):
         calories = 0
         for food in self.__food_items:
-            calories += food.calories
-        return calories
+            calories += food.calories * food.quantity
+        return "Total calories: " + str(calories)
 
     @property
     def food_items(self):
