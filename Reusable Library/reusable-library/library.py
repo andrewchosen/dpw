@@ -1,6 +1,7 @@
 class FoodList(object):
     def __init__(self):
         self.__food_items = []
+        self.__goal = 0
         pass
 
     #add FoodItem data object to array
@@ -18,9 +19,16 @@ class FoodList(object):
     #calculate total calories
     def total_calories(self):
         calories = 0
+        result = ""
         for food in self.__food_items:
             calories += food.calories * food.quantity
-        return "Total calories: " + str(calories)
+        if calories > self.__goal:
+            result = calories - self.__goal + " daily calories over your goal. Oops!"
+        elif calories < self.__goal:
+            result = self.__goal - calories + " daily calories under your goal. Way to go!"
+        else:
+            result = "exactly your daily goal. Niiiice!"
+        return "Your total calories consumed today are " + str(calories) + " which is " + result
 
     @property
     def food_items(self):
