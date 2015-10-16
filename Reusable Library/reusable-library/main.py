@@ -30,7 +30,11 @@ class MainHandler(webapp2.RequestHandler):
         md3.director = "Some Guy"
         lib.add_movie(md3)
 
-        p.body = lib.compile_list() + lib.calc_time_span()
+        if self.request.GET:
+            p.body = "We have parameters!"
+        else:
+            p.body = "No Parameters found."
+
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([
