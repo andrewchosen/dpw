@@ -59,37 +59,37 @@ class MainHandler(webapp2.RequestHandler):
             p.body = """
             <form method="GET">
                     <fieldset id="food1">
-                        <label for="food_name1">Name</label><input type="text" name="food_name1" />
-                        <label for="calories1">Calories</label><input type="text" name="calories1" />
-                        <label for="quantity1">Quantity</label><input type="text" name="quantity1" />
+                        <label for="food_name1">Food Item #1</label><input type="text" id="food_name1" name="food_name1" required="required"/>
+                        <label for="calories1">Calories</label><input type="number" name="calories1" />
+                        <label for="quantity1">Quantity</label><input type="number" name="quantity1" />
                     </fieldset>
                     <fieldset id="food2">
-                        <label for="food_name2">Name</label><input type="text" name="food_name2" />
-                        <label for="calories2">Calories</label><input type="text" name="calories2" />
-                        <label for="quantity2">Quantity</label><input type="text" name="quantity2" />
+                        <label for="food_name2">Food Item #2</label><input type="text" id="food_name2" name="food_name2" />
+                        <label for="calories2">Calories</label><input type="number" name="calories2" />
+                        <label for="quantity2">Quantity</label><input type="number" name="quantity2" />
                     </fieldset>
                     <fieldset id="food3">
-                        <label for="food_name3">Name</label><input type="text" name="food_name3" />
-                        <label for="calories3">Calories</label><input type="text" name="calories3" />
-                        <label for="quantity3">Quantity</label><input type="text" name="quantity3" />
+                        <label for="food_name3">Food Item #3</label><input type="text" id="food_name3" name="food_name3" />
+                        <label for="calories3">Calories</label><input type="number" name="calories3" />
+                        <label for="quantity3">Quantity</label><input type="number" name="quantity3" />
                     </fieldset>
                     <fieldset id="food4">
-                        <label for="food_name4">Name</label><input type="text" name="food_name4" />
-                        <label for="calories4">Calories</label><input type="text" name="calories4" />
-                        <label for="quantity4">Quantity</label><input type="text" name="quantity4" />
+                        <label for="food_name4">Food Item #4</label><input type="text" id="food_name4" name="food_name4" />
+                        <label for="calories4">Calories</label><input type="number" name="calories4" />
+                        <label for="quantity4">Quantity</label><input type="number" name="quantity4" />
                     </fieldset>
                     <fieldset id="food5">
-                        <label for="food_name5">Name</label><input type="text" name="food_name5" />
-                        <label for="calories5">Calories</label><input type="text" name="calories5" />
-                        <label for="quantity5">Quantity</label><input type="text" name="quantity5" />
+                        <label for="food_name5">Food Item #5</label><input type="text" id="food_name5" name="food_name5" />
+                        <label for="calories5">Calories</label><input type="number" name="calories5" />
+                        <label for="quantity5">Quantity</label><input type="number" name="quantity5" />
                     </fieldset>
                     <fieldset id="food6">
-                        <label for="food_name6">Name</label><input type="text" name="food_name6" />
-                        <label for="calories6">Calories</label><input type="text" name="calories6" />
-                        <label for="quantity6">Quantity</label><input type="text" name="quantity6" />
+                        <label for="food_name6">Food Item #6</label><input type="text" id="food_name6" name="food_name6" />
+                        <label for="calories6">Calories</label><input type="number" name="calories6" />
+                        <label for="quantity6">Quantity</label><input type="number" name="quantity6" />
                     </fieldset>
                     <fieldset id="total">
-                        <label for="daily_calories">Daily Calorie Goal</label><input type="text" name="daily_calories" />
+                        <label for="daily_calories">Daily Calorie Goal</label><input type="text" name="daily_calories" required="required"/>
                     </fieldset>
                     <button type="submit">Calculate</button>
             </form>
