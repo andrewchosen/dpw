@@ -54,7 +54,7 @@ class MainHandler(webapp2.RequestHandler):
 
             calories = int(self.request.GET['daily_calories'])
 
-            p.body += food_list.create_list() + "<br />" + food_list.total_calories(calories)
+            p.body += food_list.create_list() + food_list.total_calories(calories)
         else:
             p.body = """
             <form method="GET">
@@ -89,7 +89,7 @@ class MainHandler(webapp2.RequestHandler):
                         <label for="quantity6">Quantity</label><input type="number" id="quantity6" name="quantity6" />
                     </fieldset>
                     <fieldset id="total">
-                        <label for="daily_calories">Daily Calorie Goal</label><input type="text" name="daily_calories" required="required"/>
+                        <label for="daily_calories">Daily Calorie Goal</label><input type="text" id="daily_calories" name="daily_calories" required="required"/>
                     </fieldset>
                     <button type="submit">Calculate</button>
             </form>

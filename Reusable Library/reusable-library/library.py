@@ -28,7 +28,7 @@ class FoodList(object):
             result = str(t - calories) + " daily calories under your goal. Way to go!"
         else:
             result = "exactly your daily goal. Niiiice!"
-        return "Your total calories consumed today are " + str(calories) + " which is " + result
+        return "<div id='result'>Your total calories consumed today are " + str(calories) + " which is " + result + "</div>"
 
     @property
     def food_items(self):
