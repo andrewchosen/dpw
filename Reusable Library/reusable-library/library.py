@@ -1,3 +1,4 @@
+#class for food list and utilities
 class FoodList(object):
     def __init__(self):
         self.__food_items = []
@@ -13,7 +14,7 @@ class FoodList(object):
     def create_list(self):
         output = ''
         for food in self.__food_items:
-            output += "<article><p>" + str(food.quantity) + '</p><p>' + food.name + '</p><p>' + str(food.calories * food.quantity) + '</p></article>'
+            output += "<article><p>" + str(food.quantity) + ' <strong>' + food.name + '</strong> for ' + str(food.calories * food.quantity) + ' calories</p></article>'
         return output
 
     #calculate total calories
@@ -22,19 +23,22 @@ class FoodList(object):
         result = ""
         for food in self.__food_items:
             calories += food.calories * food.quantity
+        #if total calories is over daily goal, do this
         if calories > t:
-            result = str(calories - t) + " daily calories over your goal. Oops!"
+            result = "<strong class='over'>" + str(calories - t) + "</strong> daily calories over your goal. Oops! :("
+        #if total is under goal, do this
         elif calories < t:
-            result = str(t - calories) + " daily calories under your goal. Way to go!"
+            result = "<strong class='under'>" + str(t - calories) + "</strong> daily calories under your goal. Way to go! :D"
+        #otherwise total is exactly the goal, so do this
         else:
-            result = "exactly your daily goal. Niiiice!"
+            result = "<strong>exactly</strong> your daily goal. Niiiice! 8)"
         return "<div id='result'>Your total calories consumed today are " + str(calories) + " which is " + result + "</div>"
 
     @property
     def food_items(self):
         return self.__food_items
 
-
+#food item class
 class FoodData(object): #Data Object
     def __init__(self):
         self.__name = ""

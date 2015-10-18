@@ -9,6 +9,7 @@ class MainHandler(webapp2.RequestHandler):
         p = Page()
         food_list = FoodList()
 
+        #check for URL parameters
         if self.request.GET:
             if self.request.GET['food_name1']:
                 food1 = FoodData()
@@ -17,35 +18,35 @@ class MainHandler(webapp2.RequestHandler):
                 food1.quantity = self.request.GET['quantity1']
                 food_list.add_food(food1)
 
-            if self.request.GET['food_name2']:
+            if self.request.GET['food_name2'] and self.request.GET['calories2'] and self.request.GET['quantity2']:
                 food2 = FoodData()
                 food2.name =  self.request.GET['food_name2']
                 food2.calories =  self.request.GET['calories2']
                 food2.quantity = float(self.request.GET['quantity2'])
                 food_list.add_food(food2)
 
-            if self.request.GET['food_name3']:
+            if self.request.GET['food_name3'] and self.request.GET['calories3'] and self.request.GET['quantity3']:
                 food3 = FoodData()
                 food3.name =  self.request.GET['food_name3']
                 food3.calories =  self.request.GET['calories3']
                 food3.quantity = float(self.request.GET['quantity3'])
                 food_list.add_food(food3)
 
-            if self.request.GET['food_name4']:
+            if self.request.GET['food_name4'] and self.request.GET['calories4'] and self.request.GET['quantity4']:
                 food4 = FoodData()
                 food4.name =  self.request.GET['food_name4']
                 food4.calories =  self.request.GET['calories4']
                 food4.quantity = float(self.request.GET['quantity4'])
                 food_list.add_food(food4)
 
-            if self.request.GET['food_name5']:
+            if self.request.GET['food_name5'] and self.request.GET['calories5'] and self.request.GET['quantity5']:
                 food5 = FoodData()
                 food5.name =  self.request.GET['food_name5']
                 food5.calories =  self.request.GET['calories5']
                 food5.quantity = float(self.request.GET['quantity5'])
                 food_list.add_food(food5)
 
-            if self.request.GET['food_name6']:
+            if self.request.GET['food_name6'] and self.request.GET['calories6'] and self.request.GET['quantity6']:
                 food6 = FoodData()
                 food6.name =  self.request.GET['food_name6']
                 food6.calories =  self.request.GET['calories6']
@@ -54,7 +55,10 @@ class MainHandler(webapp2.RequestHandler):
 
             calories = int(self.request.GET['daily_calories'])
 
+            p.body += "<h2>Your Results</h2>"
             p.body += food_list.create_list() + food_list.total_calories(calories)
+
+        #if there are no URL parameters
         else:
             p.body = """
             <form method="GET">
@@ -95,6 +99,7 @@ class MainHandler(webapp2.RequestHandler):
             </form>
             """
 
+        # output html
         self.response.write(p.print_out())
 
 app = webapp2.WSGIApplication([

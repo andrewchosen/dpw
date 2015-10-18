@@ -16,6 +16,11 @@ $(document).ready(function(){
             e.preventDefault();
             error("Please tell us what your daily calorie goal is.");
             $("#daily_calories").addClass("error");
+        }else if ($("input:first-child").val()){
+            if(!$(this).siblings().val()){
+                e.preventDefault();
+                error("ERROR!!");
+            }
         }
     });
 
