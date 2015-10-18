@@ -2,11 +2,13 @@ class Page(object):
     def __init__(self):
         self.__title = "Calorie Calculator"
         self.__css = "css/styles.css"
+        self.__js = "js/script.js"
         self.__head = """
 <!DOCTYPE html>
 <html>
     <head>
         <title>{self.title}</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
         <link href="{self.css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
@@ -22,6 +24,8 @@ class Page(object):
         self.__close = """
             </div>
         </section>
+        <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script language="javascript" type="text/javascript" src="{self.js}"></script>
     </body>
 </html>
         """
@@ -33,6 +37,10 @@ class Page(object):
     @property
     def css(self):
         return self.__css
+
+    @property
+    def js(self):
+        return self.__js
 
     @property
     def body(self):
