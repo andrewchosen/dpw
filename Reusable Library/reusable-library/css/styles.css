@@ -1,5 +1,5 @@
 body {
-    font: 16px/1.4 arial,helvetica,sans-serif;
+    font: 16px/1.4 'Roboto Condensed', sans-serif;
     background-color: #DDF7F7;
     margin: 0;
     color: #868686;
@@ -18,6 +18,15 @@ h1 {
     max-width: 960px;
     margin: auto;
     padding: 30px;
+}
+
+#error {
+    background: #D93250;
+    color: #F5F5F5;
+    padding: 15px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
 fieldset {
