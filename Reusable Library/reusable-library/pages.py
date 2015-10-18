@@ -19,6 +19,7 @@ class Page(object):
         </header>
         <section>
             <div class="container">
+            <div id="error" style="display:none;"></div>
         """
         self.__body = ""
         self.__close = """
