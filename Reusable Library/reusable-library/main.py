@@ -61,7 +61,7 @@ class MainHandler(webapp2.RequestHandler):
                     <fieldset id="food1">
                         <label for="food_name1">Food Item #1</label><input type="text" id="food_name1" name="food_name1" required="required"/>
                         <label for="calories1">Calories</label><input type="number" id="calories1" name="calories1" />
-                        <label for="quantity1">Quantity</label><input type="number"id="quantity1" name="quantity1" min="0" value="0"/>
+                        <label for="quantity1">Quantity</label><input type="number"id="quantity1" name="quantity1" min="0"/>
                     </fieldset>
                     <fieldset id="food2">
                         <label for="food_name2">Food Item #2</label><input type="text" id="food_name2" name="food_name2" />

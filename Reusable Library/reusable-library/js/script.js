@@ -6,7 +6,11 @@ $(document).ready(function(){
         if ($("#food_name1").val() && !$("#calories1").val() || !$("#quantity1").val()){
             e.preventDefault();
             $("form").prepend("<div id='error'>Error: Please fill out the required fields.");
-            $("#food1").find("input[value='']").addClass("error");
+            $("#food1").find("input").each(function(ev){
+                if(!$(this).val()){
+                    $(this).addClass("error");
+                }
+            });
         }
     });
 
