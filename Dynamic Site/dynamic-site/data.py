@@ -59,3 +59,5 @@ class Data(object):
         magneto.height = "6'2"
         magneto.weight = 190
         magneto.powers = "Magnetic Field Control & Manipulation"
+
+        self.characters = [spiderman, daredevil, iron_man, wolverine, magneto]
