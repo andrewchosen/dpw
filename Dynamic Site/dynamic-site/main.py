@@ -7,6 +7,7 @@ class MainHandler(webapp2.RequestHandler):
         #Create instance of Data object
         d = Data()
         p = HomePage()
+        p.items = d.characters
         self.response.write(p.print_out())
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

@@ -1,3 +1,4 @@
+# Abstract class for pages
 class Page(object):
     def __init__(self):
         self._title = "My Favorite Marvel Characters"
@@ -28,12 +29,32 @@ class Page(object):
     </body>
 </html>
         """
-
+    # Function to combine all elements and print out page
     def print_out(self):
         all = self._head + self._body + self._close
         all = all.format(**locals())
         return all
 
+# Home page calculations and output
 class HomePage(Page):
     def __init__(self):
         super(HomePage, self).__init__()
+
+        # Navigation attributes
+        self._nav_open = "<nav><ul>"
+        self._nav_close = "</ul></nav>"
+        self._nav_items = ""
+        self.__items = []
+
+    # Create setter for pulling in navigation items from data
+    @items.setter
+    def items(self, arr):
+        self.__items = arr
+
+        for item in arr:
+            self._nav_items += "<li>" + item.name + "</li>"
+
+    def print_out(self):
+        all = self._head + self._body + self._nav_items + self._close
+        all = all.format(**locals())
+        return all
