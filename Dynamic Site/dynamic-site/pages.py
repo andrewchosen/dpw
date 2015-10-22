@@ -46,6 +46,10 @@ class HomePage(Page):
         self._nav_items = ""
         self.__items = []
 
+    @property
+    def items(self):
+        pass
+
     # Create setter for pulling in navigation items from data
     @items.setter
     def items(self, arr):
@@ -55,6 +59,6 @@ class HomePage(Page):
             self._nav_items += "<li>" + item.name + "</li>"
 
     def print_out(self):
-        all = self._head + self._body + self._nav_items + self._close
+        all = self._head + self._body + self._nav_open + self._nav_items + self._nav_close + self._close
         all = all.format(**locals())
         return all
