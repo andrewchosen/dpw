@@ -1,6 +1,8 @@
 body {
-    font: 14px/1.4 'Arimo', sans-serif;
+    font: 16px/1.4 'Arimo', sans-serif;
     margin: 0;
+    background: #444;
+    color: #555;
 }
 
 .container {
@@ -8,13 +10,26 @@ body {
     margin: auto;
 }
 
+section {
+    background: #fff;
+}
+
 h1 {
-    font-family: 'Fjalla', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3em;
     text-transform: uppercase;
     display: inline-block;
     margin: 0;
     background: #A11100;
-    padding: 10px 18px;
+    padding: 10px 30px;
+}
+
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
+    line-height: 1;
+    color: #000;
 }
 
 header {
@@ -22,10 +37,13 @@ header {
     color: #fff;
 }
 
-nav ul {
+ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+nav ul {
     background: #333;
 }
 
@@ -35,7 +53,39 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    padding: 10px 18px;
-    color: #fff;
+    padding: 15px 30px;
+    color: #f5f5f5;
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #444;
+}
+
+article {
+    padding: 60px 30px;
+    clear: both;
+    overflow: auto;
+}
+
+article p {
+    padding: 15px 0;
+}
+
+article strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+article ul li {
+    margin-bottom: 30px;
+    width: 50%;
+    float: left;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding-top: 30px;
+    color: #999;
 }
