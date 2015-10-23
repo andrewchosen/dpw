@@ -79,9 +79,9 @@ class SpiderMan(Page):
         self._char_details += "<li><strong>Real Name: </strong>" + obj.real_name + "</li>"
         self._char_details += "<li><strong>Description: </strong>" + obj.description + "</li>"
         self._char_details += "<li><strong>Alignment: </strong>" + obj.alignment + "</li>"
-        self._char_details += "<li><strong>Height: </strong>" + obj.real_name + "</li>"
-        self._char_details += "<li><strong>Weight: </strong>" + obj.real_name + "</li>"
-        self._char_details += "<li><strong>Powers: </strong>" + obj.real_name + "</li>"
+        self._char_details += "<li><strong>Height: </strong>" + obj.height + "</li>"
+        self._char_details += "<li><strong>Weight: </strong>" + obj.print_weight() + "</li>"
+        self._char_details += "<li><strong>Powers: </strong>" + obj.powers + "</li>"
 
     def print_out(self):
         all = self._head + self._body + self._char_open + self._char_details + self._char_close + self._close
