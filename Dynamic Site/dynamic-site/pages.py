@@ -77,9 +77,9 @@ class HomePage(Page):
         return all
 
 # Character page class
-class CharacterPage(Page):
+class ContentPage(Page):
     def __init__(self, obj):
-        super(CharacterPage, self).__init__()
+        super(ContentPage, self).__init__()
         self._title = obj.name + " - " + self._title
         self._char_open = "<article id='" + obj.url_code + "'>"
         self._char_close = "</ul></div></article>"
