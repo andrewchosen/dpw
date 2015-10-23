@@ -10,14 +10,14 @@ class Character(object):
         self.weight = 0
         self.powers = ""
 
-    # function to print weight and add 'lbs' after it
+    # function to print and format weight
     def print_weight(self):
         return str(self.weight) + " lbs"
 
 # Data object class
 class Data(object):
     def __init__(self):
-
+        
         # Data for Spider-Man
         spiderman = Character()
         spiderman.url_code = "spiderman"
@@ -28,6 +28,7 @@ class Data(object):
         spiderman.height = "5ft 10in"
         spiderman.weight = 167
         spiderman.powers = "Superhuman Strength, Surface Clinging, Superhuman Agility, and Spider-Senses"
+        
 
         # Data for Daredevil
         daredevil = Character()
@@ -72,6 +73,6 @@ class Data(object):
         magneto.height = "6'2"
         magneto.weight = 190
         magneto.powers = "Magnetic Field Control & Manipulation"
-
+        
         # Compile character objects into array
         self.characters = [spiderman, daredevil, iron_man, wolverine, magneto]
