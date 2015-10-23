@@ -54,10 +54,11 @@ class HomePage(Page):
     @items.setter
     def items(self, arr):
         self.__items = arr
-
+        # loop through data objects and use their .name attributes as links
         for item in arr:
-            self._nav_items += "<li>" + item.name + "</li>"
+            self._nav_items += "<li><a href='?character=" + item.url_code + "'>" + item.name + "</a></li>"
 
+    # Override print_out function from super
     def print_out(self):
         all = self._head + self._body + self._nav_open + self._nav_items + self._nav_close + self._close
         all = all.format(**locals())
