@@ -10,12 +10,15 @@ class Character(object):
         self.weight = 0
         self.powers = ""
 
+    # function to print weight and add 'lbs' after it
     def print_weight(self):
         return str(self.weight) + " lbs"
 
+# Data object class
 class Data(object):
     def __init__(self):
 
+        # Data for Spider-Man
         spiderman = Character()
         spiderman.url_code = "spiderman"
         spiderman.name = "Spider-Man"
@@ -26,6 +29,7 @@ class Data(object):
         spiderman.weight = 167
         spiderman.powers = "Superhuman Strength, Surface Clinging, Superhuman Agility, and Spider-Senses"
 
+        # Data for Daredevil
         daredevil = Character()
         daredevil.url_code = "daredevil"
         daredevil.name = "Daredevil"
@@ -36,6 +40,7 @@ class Data(object):
         daredevil.weight = 200
         daredevil.powers = "Superhuman Senses (except sight)"
 
+        # Data for Iron Man
         iron_man = Character()
         iron_man.url_code = "iron-man"
         iron_man.name = "Iron Man"
@@ -46,6 +51,7 @@ class Data(object):
         iron_man.weight = 225
         iron_man.powers = "None; but he has an extremely high IQ which helps him invent and build gadgets and, of course, his Iron Man suits."
 
+        # Data for Wolverine
         wolverine = Character()
         wolverine.url_code = "wolverine"
         wolverine.name = "Wolverine"
@@ -56,6 +62,7 @@ class Data(object):
         wolverine.weight = 300
         wolverine.powers = "Cellular Regeneration, Heightened Senses, and his Claws"
 
+        # Data for Magneto
         magneto = Character()
         magneto.url_code = "magneto"
         magneto.name = "Magneto"
@@ -66,4 +73,5 @@ class Data(object):
         magneto.weight = 190
         magneto.powers = "Magnetic Field Control & Manipulation"
 
+        # Compile character objects into array
         self.characters = [spiderman, daredevil, iron_man, wolverine, magneto]

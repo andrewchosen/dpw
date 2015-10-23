@@ -43,6 +43,7 @@ class Page(object):
         self._nav_items = ""
         self.__items = []
 
+    # getter for navigation items
     @property
     def items(self):
         pass
@@ -92,6 +93,7 @@ class CharacterPage(Page):
         self._char_details += "<li><strong>Weight: </strong>" + obj.print_weight() + "</li>"
         self._char_details += "<li><strong>Powers: </strong>" + obj.powers + "</li>"
 
+    # override print_out() for character pages
     def print_out(self):
         all = self._head + self._nav_open + self._nav_items + self._nav_close + self._body + self._char_open + self._char_details + self._char_close + self._close
         all = all.format(**locals())
