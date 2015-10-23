@@ -71,7 +71,7 @@ class HomePage(Page):
 # Character page class
 class CharacterPage(Page):
     def __init__(self, obj):
-        super(SpiderMan, self).__init__()
+        super(CharacterPage, self).__init__()
         self._char_open = "<article>"
         self._char_close = "</article>"
         self._char_details = "<h2>" + obj.name + "</h2>"

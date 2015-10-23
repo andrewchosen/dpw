@@ -7,6 +7,7 @@ class MainHandler(webapp2.RequestHandler):
         #Create instance of Data object
         d = Data()
         if self.request.GET:
+            if self.request.GET['character'] == "spiderman":
                 p = CharacterPage(d.characters[0])
         else:
             p = HomePage()
