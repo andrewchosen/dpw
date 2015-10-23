@@ -66,7 +66,7 @@ class HomePage(Page):
     def __init__(self):
         super(HomePage, self).__init__()
         self._body = """
-                <p>Since my childhood, I, like most children, have followed and loved Marvel comics. From reading the comic books, watching the cartoons, and eventually freaking out over every real life action movie released, I have witnessed most of the characters that Stan Lee and his partners have created. I honestly can't think of a character I don't like, heroes or villains, which makes picking just five of my favorites very difficult. However, these are the ones I came up with so enjoy! Debate! Fight! Just don't hurt me, please.</p>
+                <article>Since my childhood, I, like most children, have followed and loved Marvel comics. From reading the comic books, watching the cartoons, and eventually freaking out over every real life action movie released, I have witnessed most of the characters that Stan Lee and his partners have created. I honestly can't think of a character I don't like, heroes or villains, which makes picking just five of my favorites very difficult. However, these are the ones I came up with so enjoy! Debate! Fight! Just don't hurt me, please.</article>
                 """
 
     # Override print_out function from super
