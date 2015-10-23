@@ -60,7 +60,7 @@ class Data(object):
         magneto.url_code = "magneto"
         magneto.name = "Magneto"
         magneto.real_name = "Max Eisenhardt"
-        magneto.description = ""
+        magneto.description = "Still need to write this."
         magneto.alignment = "Villain"
         magneto.height = "6'2"
         magneto.weight = 190
