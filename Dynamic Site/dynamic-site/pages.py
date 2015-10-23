@@ -28,7 +28,9 @@ class Page(object):
             </div>
         </section>
         <footer>
-            <p>&copy; 2015</p>
+            <div class="container">
+                <p>&copy; 2015</p>
+            </div>
         </footer>
         <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script language="javascript" type="text/javascript" src="{self._js}"></script>
