@@ -20,7 +20,7 @@ class Data(object):
         spiderman.url_code = "spiderman"
         spiderman.name = "Spider-Man"
         spiderman.real_name = "Peter Parker"
-        spiderman.description = "Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities. Taught that with great power comes great responsibility, Spidey has vowed to use his powers to help people."
+        spiderman.description = "Bitten by a radioactive spider, high school student Peter Parker gained the speed, strength and powers of a spider. Adopting the name Spider-Man, Peter hoped to start a career using his new abilities. Taught that with great power comes great responsibility, Spidey has vowed to use his powers to help people. <small>[<a href='http://marvel.com/characters/54/spider-man'>Source</a>]</small>"
         spiderman.alignment = "Hero"
         spiderman.height = "5ft 10in"
         spiderman.weight = 167
@@ -30,7 +30,7 @@ class Data(object):
         daredevil.url_code = "daredevil"
         daredevil.name = "Daredevil"
         daredevil.real_name = "Matthew Murdock"
-        daredevil.description = "Abandoned by his mother, Matt Murdock was raised by his father, boxer 'Battling Jack' Murdock, in Hell's Kitchen. Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law; however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter."
+        daredevil.description = "Abandoned by his mother, Matt Murdock was raised by his father, boxer 'Battling Jack' Murdock, in Hell's Kitchen. Realizing that rules were needed to prevent people from behaving badly, young Matt decided to study law; however, when he saved a man from an oncoming truck, it spilled a radioactive cargo that rendered Matt blind while enhancing his remaining senses. Under the harsh tutelage of blind martial arts master Stick, Matt mastered his heightened senses and became a formidable fighter. <small>[<a href='http://marvel.com/characters/11/daredevil'>Source</a>]</small>"
         daredevil.alignment = "Hero"
         daredevil.height = "6'0"
         daredevil.weight = 200
@@ -40,7 +40,7 @@ class Data(object):
         iron_man.url_code = "iron-man"
         iron_man.name = "Iron Man"
         iron_man.real_name = "Tony Stark"
-        iron_man.description = "Wounded, captured and forced to build a weapon by his enemies, billionaire industrialist Tony Stark instead created an advanced suit of armor to save his life and escape captivity. Now with a new outlook on life, Tony uses his money and intelligence to make the world a safer, better place as Iron Man."
+        iron_man.description = "Wounded, captured and forced to build a weapon by his enemies, billionaire industrialist Tony Stark instead created an advanced suit of armor to save his life and escape captivity. Now with a new outlook on life, Tony uses his money and intelligence to make the world a safer, better place as Iron Man. <small>[<a href='http://marvel.com/characters/29/iron_man'>Source</a>]</small>"
         iron_man.alignment = "Hero"
         iron_man.height = "6'1"
         iron_man.weight = 225
@@ -50,7 +50,7 @@ class Data(object):
         wolverine.url_code = "wolverine"
         wolverine.name = "Wolverine"
         wolverine.real_name = 'James "Logan" Howlett'
-        wolverine.description = "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
+        wolverine.description = "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers. <small>[<a href='http://marvel.com/characters/66/wolverine'>Source</a>]</small>"
         wolverine.alignment = "Hero"
         wolverine.height = "5'3"
         wolverine.weight = 300
@@ -60,7 +60,7 @@ class Data(object):
         magneto.url_code = "magneto"
         magneto.name = "Magneto"
         magneto.real_name = "Max Eisenhardt"
-        magneto.description = "Still need to write this."
+        magneto.description = "The master of magnetism and one of the most infamous and powerful mutants, possessing mastery over magnetism. He has played many roles in his long life: prisoner, survivor, terrorist, savior, conqueror, teacher, villain, and anti-hero. <small>[<a href='http://www.comicvine.com/magneto/4005-1441/'>Source</a>]</small>"
         magneto.alignment = "Villain"
         magneto.height = "6'2"
         magneto.weight = 190

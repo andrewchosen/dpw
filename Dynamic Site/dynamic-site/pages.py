@@ -17,7 +17,7 @@ class Page(object):
     <body>
         <header>
             <div class="container">
-                <h1>{self._page_title}</h1>
+                <h1><a href="/">{self._page_title}</a></h1>
             </div>
         </header>
         <section>
