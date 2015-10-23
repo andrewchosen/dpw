@@ -61,6 +61,9 @@ class Page(object):
         all = self._head + self._body + self._close
         all = all.format(**locals())
         return all
+        
+    def image(self):
+        return = "<div id='img-col'><img src='images/placeholder.jpg' /></div>"
 
 # Home page calculations and output
 class HomePage(Page):
@@ -69,7 +72,7 @@ class HomePage(Page):
         self._body = """
                 <article>Since my childhood, I, like most children, have followed and loved Marvel comics. From reading the comic books, watching the cartoons, and eventually freaking out over every real life action movie released, I have witnessed most of the characters that Stan Lee and his partners have created. I honestly can't think of a character I don't like, heroes or villains, which makes picking just five of my favorites very difficult. However, these are the ones I came up with so enjoy! Debate! Fight! Just don't hurt me, please.</article>
                 """
-
+    
     # Override print_out function from super
     def print_out(self):
         all = self._head + self._nav_open + self._nav_items + self._nav_close + self._body + self._close
@@ -83,7 +86,6 @@ class ContentPage(Page):
         self._title = obj.name + " - " + self._title
         self._char_open = "<article id='" + obj.url_code + "'>"
         self._char_close = "</ul></div></article>"
-        self._char_details = "<div id='img-col'><img src='images/" + obj.url_code + ".jpg' /></div>"
         self._char_details += "<div id='info-col'><h2>" + obj.name + "</h2>"
         self._char_details += "<p>" + obj.description + "</p>"
         self._char_details += "<ul>"
@@ -92,9 +94,12 @@ class ContentPage(Page):
         self._char_details += "<li><strong>Height: </strong>" + obj.height + "</li>"
         self._char_details += "<li><strong>Weight: </strong>" + obj.print_weight() + "</li>"
         self._char_details += "<li><strong>Powers: </strong>" + obj.powers + "</li>"
+        
+    def image(self):
+        return = "<div id='img-col'><img src='images/" + obj.url_code + ".jpg' alt='" + obj.name + "'/></div>"
 
     # override print_out() for character pages
     def print_out(self):
-        all = self._head + self._nav_open + self._nav_items + self._nav_close + self._body + self._char_open + self._char_details + self._char_close + self._close
+        all = self._head + self._nav_open + self._nav_items + self._nav_close + self._body + self._char_open + image() + self._char_details + self._char_close + self._close
         all = all.format(**locals())
         return all
