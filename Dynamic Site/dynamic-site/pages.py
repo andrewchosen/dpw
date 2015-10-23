@@ -1,7 +1,8 @@
 # Abstract class for pages
 class Page(object):
     def __init__(self):
-        self._title = "My Favorite Marvel Characters"
+        self._title = "My Top 5 Marvel Characters"
+        self._page_title = self._title
         self._css = "css/styles.css"
         self._js = "js/script.js"
         self._head = """
@@ -14,7 +15,7 @@ class Page(object):
     <body>
         <header>
             <div class="container">
-                <h1>{self._title}</h1>
+                <h1>{self._page_title}</h1>
             </div>
         </header>
         <section>
@@ -74,6 +75,7 @@ class HomePage(Page):
 class CharacterPage(Page):
     def __init__(self, obj):
         super(CharacterPage, self).__init__()
+        self._title = obj.name + " - " + self._title
         self._char_open = "<article>"
         self._char_close = "</article>"
         self._char_details = "<h2>" + obj.name + "</h2>"
