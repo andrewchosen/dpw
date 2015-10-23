@@ -10,6 +10,7 @@ class Page(object):
 <html>
     <head>
         <title>{self._title}</title>
+        <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
         <link href="{self._css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
@@ -76,7 +77,7 @@ class CharacterPage(Page):
     def __init__(self, obj):
         super(CharacterPage, self).__init__()
         self._title = obj.name + " - " + self._title
-        self._char_open = "<article>"
+        self._char_open = "<article id='" + obj.url_code + "'>"
         self._char_close = "</article>"
         self._char_details = "<h2>" + obj.name + "</h2>"
         self._char_details += "<p>" + obj.description + "</p>"
