@@ -11,6 +11,7 @@ class Page(object):
     <head>
         <title>{self._title}</title>
         <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
         <link href="{self._css}" rel="stylesheet" type="text/css" />
     </head>
     <body>
