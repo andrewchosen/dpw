@@ -9,6 +9,14 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             if self.request.GET['character'] == "spiderman":
                 p = CharacterPage(d.characters[0])
+            if self.request.GET['character'] == "daredevil":
+                p = CharacterPage(d.characters[1])
+            if self.request.GET['character'] == "iron-man":
+                p = CharacterPage(d.characters[2])
+            if self.request.GET['character'] == "wolverine":
+                p = CharacterPage(d.characters[3])
+            if self.request.GET['character'] == "magneto":
+                p = CharacterPage(d.characters[4])
         else:
             p = HomePage()
         p.items = d.characters
