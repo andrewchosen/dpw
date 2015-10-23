@@ -83,9 +83,30 @@ article ul li {
     float: left;
 }
 
+article #img-col img {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
 footer {
     clear: both;
     text-align: center;
     padding-top: 30px;
     color: #999;
+}
+
+@media screen and (min-width: 480px) {
+
+    article #img-col {
+        width: 33%;
+        float: left;
+    }
+
+    article #info-col {
+        width: 67%;
+        float: left;
+        padding-left: 60px;
+        box-sizing: border-box;
+    }
+
 }

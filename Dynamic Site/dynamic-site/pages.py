@@ -81,8 +81,9 @@ class CharacterPage(Page):
         super(CharacterPage, self).__init__()
         self._title = obj.name + " - " + self._title
         self._char_open = "<article id='" + obj.url_code + "'>"
-        self._char_close = "</article>"
-        self._char_details = "<h2>" + obj.name + "</h2>"
+        self._char_close = "</ul></div></article>"
+        self._char_details = "<div id='img-col'><img src='images/" + obj.url_code + ".jpg' /></div>"
+        self._char_details += "<div id='info-col'><h2>" + obj.name + "</h2>"
         self._char_details += "<p>" + obj.description + "</p>"
         self._char_details += "<ul>"
         self._char_details += "<li><strong>Real Name: </strong>" + obj.real_name + "</li>"
