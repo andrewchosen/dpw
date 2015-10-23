@@ -1,13 +1,13 @@
 import webapp2
 from data import Data
-from pages import HomePage, SpiderMan
+from pages import HomePage, CharacterPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         #Create instance of Data object
         d = Data()
         if self.request.GET:
-            p = SpiderMan(d.characters[0])
+                p = CharacterPage(d.characters[0])
         else:
             p = HomePage()
         p.items = d.characters

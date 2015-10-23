@@ -69,7 +69,7 @@ class HomePage(Page):
         return all
 
 # Character page class
-class SpiderMan(Page):
+class CharacterPage(Page):
     def __init__(self, obj):
         super(SpiderMan, self).__init__()
         self._char_open = "<article>"
