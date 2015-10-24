@@ -61,19 +61,16 @@ class Page(object):
         all = self._head + self._body + self._close
         all = all.format(**locals())
         return all
-<<<<<<< HEAD
-        
-    def image(self):
-        return "<div id='img-col'><img src='images/placeholder.jpg' /></div>"
-=======
->>>>>>> parent of 4151715... Reorganized image code and created polymorphic function
 
 # Home page calculations and output
 class HomePage(Page):
     def __init__(self):
         super(HomePage, self).__init__()
         self._body = """
-                <article>Since my childhood, I, like most children, have followed and loved Marvel comics. From reading the comic books, watching the cartoons, and eventually freaking out over every real life action movie released, I have witnessed most of the characters that Stan Lee and his partners have created. I honestly can't think of a character I don't like, heroes or villains, which makes picking just five of my favorites very difficult. However, these are the ones I came up with so enjoy! Debate! Fight! Just don't hurt me, please.</article>
+                <article>
+                    <h2>Overview</h2>
+                    <p>Since my childhood, I, like most children, have followed and loved Marvel comics. From reading the comic books, watching the cartoons, and eventually freaking out over every real life action movie released, I have witnessed most of the characters that Stan Lee and his partners have created. I honestly can't think of a character I don't like, heroes or villains, which makes picking just five of my favorites very difficult. However, these are the ones I came up with so enjoy! Debate! Fight! Just don't hurt me, please.</p>
+                </article>
                 """
 
     # Override print_out function from super
@@ -89,12 +86,8 @@ class ContentPage(Page):
         self._title = obj.name + " - " + self._title
         self._char_open = "<article id='" + obj.url_code + "'>"
         self._char_close = "</ul></div></article>"
-<<<<<<< HEAD
-        self._char_details = "<div id='info-col'><h2>" + obj.name + "</h2>"
-=======
         self._char_details = "<div id='img-col'><img src='images/" + obj.url_code + ".jpg' /></div>"
         self._char_details += "<div id='info-col'><h2>" + obj.name + "</h2>"
->>>>>>> parent of 4151715... Reorganized image code and created polymorphic function
         self._char_details += "<p>" + obj.description + "</p>"
         self._char_details += "<ul>"
         self._char_details += "<li><strong>Real Name: </strong>" + obj.real_name + "</li>"

@@ -1,6 +1,6 @@
 import webapp2
 from data import Data
-from pages import HomePage, CharacterPage
+from pages import HomePage, ContentPage
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
