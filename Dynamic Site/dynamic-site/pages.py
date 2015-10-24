@@ -63,7 +63,7 @@ class Page(object):
         return all
         
     def image(self):
-        return = "<div id='img-col'><img src='images/placeholder.jpg' /></div>"
+        return "<div id='img-col'><img src='images/placeholder.jpg' /></div>"
 
 # Home page calculations and output
 class HomePage(Page):
@@ -86,7 +86,7 @@ class ContentPage(Page):
         self._title = obj.name + " - " + self._title
         self._char_open = "<article id='" + obj.url_code + "'>"
         self._char_close = "</ul></div></article>"
-        self._char_details += "<div id='info-col'><h2>" + obj.name + "</h2>"
+        self._char_details = "<div id='info-col'><h2>" + obj.name + "</h2>"
         self._char_details += "<p>" + obj.description + "</p>"
         self._char_details += "<ul>"
         self._char_details += "<li><strong>Real Name: </strong>" + obj.real_name + "</li>"
